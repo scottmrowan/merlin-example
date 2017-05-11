@@ -38,19 +38,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: UserProject
+all: ExampleProject
 
 # Tool invocations
-UserProject: $(OBJS) $(USER_OBJS)
+ExampleProject: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/scott/git/merlin-eclipse/MerlinLibrary/Release" -L"/home/scott/git/merlin-eclipse/MerlinLibrary/Debug" -Xlinker -rpath /home/scott/git/merlin-eclipse/MerlinLibrary/Release -Xlinker -rpath /home/scott/git/merlin-eclipse/MerlinLibrary/Debug -o "UserProject" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/scott/git/merlin-eclipse/MerlinLibrary/Release" -L"/home/scott/git/merlin-eclipse/MerlinLibrary/Debug" -Xlinker -rpath /home/scott/git/merlin-eclipse/MerlinLibrary/Release -Xlinker -rpath /home/scott/git/merlin-eclipse/MerlinLibrary/Debug -o "ExampleProject" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) UserProject
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) ExampleProject
 	-@echo ' '
 
 .PHONY: all clean dependents

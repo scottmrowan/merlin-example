@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/UserProject.cpp 
+../src/lhc_optics_test.cpp 
 
 OBJS += \
-./src/UserProject.o 
+./src/lhc_optics_test.o 
 
 CPP_DEPS += \
-./src/UserProject.d 
+./src/lhc_optics_test.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
