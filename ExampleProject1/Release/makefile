@@ -44,7 +44,7 @@ all: ExampleProject1
 ExampleProject1: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "ExampleProject1" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/scott/git/merlin-eclipse/MerlinLibrary/Release" -o "ExampleProject1" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
